@@ -20,7 +20,7 @@ public class RadioPrincipal {
     public static void main(String[] args) {
     // srive para poder crear un objeto de cada tipo de clase
     Scanner teclado=new Scanner(System.in);
-    radio cont;
+    Radio cont;
     // se realiza polimorfismo para poder crear un objeto de tipo radio pero
     // de la clase Driver2
     cont = new Driver2();
