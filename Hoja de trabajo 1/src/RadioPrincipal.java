@@ -81,8 +81,9 @@ public class RadioPrincipal {
         System.out.println("1. Anterior");
         System.out.println("2. Siguiente");
         int next=teclado.nextInt();
-        if (next==1)
+        if (next==1){
             cont.Sintonizar(false);
+        }
         else
             cont.Sintonizar(true);	
     }	
