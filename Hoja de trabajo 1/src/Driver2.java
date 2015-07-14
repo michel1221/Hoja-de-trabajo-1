@@ -88,7 +88,12 @@ public Driver2 (){
     }
 
     public void Memoria(int Pos) {
-       
+       if (modeEmisora == 0){
+		numAM = arregloBotAM[Pos];
+	}
+	else{
+		numFM = arregloBotFM[Pos];
+	}
     }
 
     public double getEmisora() {
