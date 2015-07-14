@@ -50,10 +50,37 @@ public Driver2 (){
        modeEmisora = Band;
     }
 
-    @Override
     public void Sintonizar(boolean uD) {
-        
-    }
+        if (uD == true){
+			if (modeEmisora == 0){
+				numAM = numAM + 10;
+				if (numAM > 1610){
+					numAM = 530;
+				}
+			}
+			else{
+				numFM = numFM + 0.2;
+				if (numFM > 107.9){
+					numFM = 87.9;
+				}
+			}
+		}
+		else{
+			if (modeEmisora == 0){
+				numAM = numAM - 10;
+				if (numAM < 530){
+					numAM = 1610;
+				}
+			}
+			else{
+				numFM = numFM - 0.2;
+				if (numFM < 87.9){
+					numFM = 107.9;
+				}
+			}
+		}
+	}
+    
 
     @Override
     public void Guardar(int Pos) {
