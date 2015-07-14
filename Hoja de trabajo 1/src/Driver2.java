@@ -11,7 +11,7 @@
  * @author Luis Eduardo Ruano carne 14187
  * @author Luis Pedro Velasquez carne 14537
  */
-public class Driver2 implements radio{
+public class Driver2 implements Radio{
 // estos son los atributos de la clase
 private int modeEmisora; // indica si es AM o FM
 private int numAM;  // indica si se inica en AM
