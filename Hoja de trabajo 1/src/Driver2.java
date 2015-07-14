@@ -30,22 +30,18 @@ public Driver2 (){
 		arregloBotFM[i]= 87.9;
 	}
 }
-    @Override
     public void setESTADO(boolean ESTADO) {
         estadoRadio = ESTADO;
     }
 
-    @Override
     public boolean getEstado() {
         return estadoRadio;
     }
 
-    @Override
     public int getAMFM() {
         return modeEmisora;
     }
 
-    @Override
     public void setAMFM(int Band) {
        modeEmisora = Band;
     }
@@ -82,17 +78,19 @@ public Driver2 (){
 	}
     
 
-    @Override
     public void Guardar(int Pos) {
-        
+        if (modeEmisora == 0){
+			arregloBotAM[Pos] = numAM;
+		}
+	else{
+			arregloBotFM[Pos] = numFM;
+	}
     }
 
-    @Override
     public void Memoria(int Pos) {
        
     }
 
-    @Override
     public double getEmisora() {
        if (modeEmisora == 0){
 			return numAM;
@@ -101,5 +99,5 @@ public Driver2 (){
 			return numFM;
 		}
 	}
-    }
+   }
 
