@@ -16,7 +16,7 @@ public class RadioPrincipal {
     public static void main(String[] args) {
        
     Scanner teclado=new Scanner(System.in);
-    radio cont;
+    Driver2 cont;
     cont = new Driver2();
     boolean esta=cont.getEstado();
     while (esta){
@@ -62,19 +62,30 @@ public class RadioPrincipal {
 	    cont.setAMFM(0);
 	    }
        }
-
-
-
-
-
-
-
-
-
-
-
-// TODO code application logic here
+    else if (pos == 3){
+        System.out.println("Sintonizar estacion anterior o siguiente");
+        System.out.println("1. Anterior");
+        System.out.println("2. Siguiente");
+        int next=teclado.nextInt();
+        if (next==1)
+            cont.Sintonizar(false);
+        else
+            cont.Sintonizar(true);	
+    }	
+    else if (pos == 4){
+        System.out.println("Ingrese el numero del boton en el cual quiere guardar");
+        int next = teclado.nextInt();
+        cont.Guardar(next);
     }
+    else if (pos == 5){
+	System.out.println("Seleccionar el boton de la estacion");
+	int next = teclado.nextInt();
+	cont.Memoria(next);
+    }
+	esta=cont.getEstado();
+}
+ System.out.println("Saliendo de la radio");   
+// TODO code application logic here
     
 }
 }
